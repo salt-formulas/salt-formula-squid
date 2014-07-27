@@ -2,7 +2,7 @@
 {% set proxy = salt['grains.filter_by']({
     'Debian': {
         'pkgs': ['squid'],
-        'service': 'squid3,
+        'service': 'squid3',
         'access': [],
         'deny': [],
         'src_acl': {},
