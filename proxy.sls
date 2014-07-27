@@ -5,7 +5,7 @@ squid_packages:
   pkg.installed:
   - names: {{ proxy.pkgs }}
 
-/etc/squid3/squid.conf:
+{{ proxy.config_file }}:
   file.managed:
   - source: salt://squid/files/squid.conf
   - template: jinja
@@ -18,6 +18,6 @@ squid_service:
   - require:
     - pkg: squid_packages
   - watch:
-    - file: /etc/squid3/squid.conf
+    - file: {{ proxy.config_file }}
 
 {%- endif %}
