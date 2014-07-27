@@ -1,10 +1,21 @@
 
-# SQUID
+# SQUID 
 
 ## Sample pillars
 
-### Squid as apt-proxy
+### Squid as proxy
 
     squid:
-      apt_proxy:
+      proxy:
         enabled: true
+        admin:
+          user: manager
+          password: passwd
+        deny:
+        - 192.168.2.30
+        allow:
+        - localnet
+
+## Read more
+
+* https://raw.githubusercontent.com/saltstack-formulas/squid-formula

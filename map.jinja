@@ -1,0 +1,25 @@
+
+{% set proxy = salt['grains.filter_by']({
+    'Debian': {
+        'pkgs': ['squid'],
+        'service': 'squid3,
+        'access': [],
+        'deny': [],
+        'src_acl': {},
+        'port_acl': {},
+        'bind': {
+          'port': 3128
+        },
+    },
+    'RedHat': {
+        'pkgs': ['squid'],
+        'service': 'squid3',
+        'access': [],
+        'deny': [],
+        'src_acl': {},
+        'port_acl': {},
+        'bind': {
+          'port': 3128
+        },
+    },
+}, merge=salt['pillar.get']('squid:proxy')) %}
