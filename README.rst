@@ -1,9 +1,15 @@
 
-# SQUID 
+=============
+Squid Formula
+============= 
 
-## Sample pillars
 
-### Squid as proxy
+Sample Pillars
+==============
+
+Squid as proxy
+
+.. code-block:: yaml
 
     squid:
       proxy:
@@ -16,7 +22,8 @@
         allow:
         - localnet
 
-## Read more
+More Information
+================
 
 * https://raw.githubusercontent.com/saltstack-formulas/squid-formula
 * http://itkia.com/using-squid-to-cache-apt-updates-for-debian-and-ubuntu/
